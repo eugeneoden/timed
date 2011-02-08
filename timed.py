@@ -69,7 +69,7 @@ def get_week(dt=None):
 
     dt = dt.replace(hour=0, minute=0, second=0, microsecond=0)
 
-    offset = datetime.timedelta(days=dt.isoweekday())
+    offset = datetime.timedelta(days=(dt.isoweekday()-1))
 
     startOfWeek = dt - offset
 
